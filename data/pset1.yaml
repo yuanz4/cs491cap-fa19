@@ -1,10 +1,10 @@
 votes:
   - problem: UVa 00514
     name: Rails
-    vote: none
+    vote: 2
   - problem: 00978
     name: Lemmings Battle
-    vote: none
+    vote: 2
   - problem: 10172
     name: The Lonesome Cargo
     vote: none
@@ -16,16 +16,16 @@ votes:
     vote: none
   - problem: 11136
     name: Hoax or what
-    vote: none
+    vote: 1
   - problem: 11572
     name: Unique Snowflakes
-    vote: none
+    vote: 3
   - problem: 11995
     name: I Can Guess
-    vote: none
+    vote: 2
   - problem: 01062
     name: Containers
-    vote: none
+    vote: 1
   - problem: 01203
     name: Argus
-    vote: none
+    vote: 2
