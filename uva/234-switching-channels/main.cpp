@@ -51,7 +51,7 @@ int main() {
 			miss[i] = INT_MAX;
 		int best[p];
 		do {
-			int level[5] = {0};
+			int level[5] = {};
 			checkMiss(prog, point, impor, level, p, a);
 			bool better = false;
 			for (int i = 0; i < 5; i++) {
