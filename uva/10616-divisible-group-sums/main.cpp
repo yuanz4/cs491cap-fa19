@@ -1,47 +1,47 @@
-#include <bits/stdc++.h>
-using namespace std;
+#include <cstdio>
+#include <cstring>
 
-const int MX = 1000;
-int d[MX+1];
-int num[201];
-
-int solve(int N, int M, int D) {
-	printf("%d %d %d\n", N, M, D);
-	int ret = 0;
-	memset(d, -1, sizeof(d));
-	d[0] = 0;
-	for (int i = 1; i <= N; i++) {
-		for (int j = 0; j <= MX; j++) {
-			if (d[j] != -1) {
-				int cur = j+num[i];
-				if (cur <= MX) {
-					if (d[cur] == -1)
-						d[cur] = 0;
-					d[cur] += d[j] + 1;
-					if (d[cur] >= M && j % D == 0) {
-						ret += d[cur] / M;
-						d[cur] %= M;
-					}
-				}
+const int MX = 200+5; 
+int n, q, num[MX], rec[MX];
+long long dp[15][MX * MX];
+ 
+void solve(int cas) {
+	int D, N, sum = 0;
+	long long ans = 0;
+	scanf("%d %d", &D, &N);
+	for (int i = 0; i < n; i++) {
+		rec[i] = (num[i] % D + D) % D;
+		sum += rec[i];
+	}
+	memset(dp, 0, sizeof dp);
+	dp[0][0] = 1;
+	for (int i = 0; i < n; i++) {
+		for (int j = N - 1; j >= 0; j--) {
+			for (int k = 0; k <= sum; k++) {
+				dp[j + 1][k + rec[i]] += dp[j][k];
 			}
 		}
+		// for (int j = 0; j <= N; j++) {
+		// 	for (int k = 0; k <= sum; k++) {
+		// 		printf("%lld ", dp[j][k]);
+		// 	}
+		// 	printf("\n");
+		// }
+		// printf("------------------------------\n");
 	}
-	return ret;
+	for (int i = 0; i <= sum; i += D)
+		ans += dp[N][i];
+	printf("QUERY %d: %lld\n", cas, ans);
 }
-
-int main() {
-	int N, Q, M, D;
-	int index = 1;
-	while (scanf("%d %d", &N, &Q), N) {
-		printf("SET %d:\n", index++);
-		for (int i = 1; i <= N; i++)
-			scanf("%d", &num[i]);
-		for (int i = 1; i <= Q; i++) {
-			scanf("%d %d", &M, &D);
-			printf("QUERY %d: %d\n", i, solve(N, M, D));
-		}
-		
-		
+ 
+int main () {
+	int cas = 1;
+	while (scanf("%d%d", &n, &q), n + q) {
+		for (int i = 0; i < n; i++)
+		scanf("%d", &num[i]);
+		printf("SET %d:\n", cas++);
+		for (int i = 1; i <= q; i++)
+			solve(i);
 	}
 	return 0;
 }
