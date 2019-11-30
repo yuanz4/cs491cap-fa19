@@ -1,4 +1,10 @@
-7.8966
--2.2414
-1.0000
-0.0000
+3
+1 Delete 5
+2 Replace 4,d
+3 Delete 1
+
+4
+1 Insert 1,a
+2 Insert 1,b
+3 Insert 1,a
+4 Insert 1,a
