@@ -19,6 +19,7 @@ double get_time(int lc, int nc) {
 
 int main() {
 	while (scanf("%d", &n), n) {
+		arr[0] = 0;
 		for (int i = 1; i <= n; i++)
 	    	scanf("%d", &arr[i]);
 	    scanf("%lf %d %lf %lf %lf", &b, &r, &v, &e, &f);
