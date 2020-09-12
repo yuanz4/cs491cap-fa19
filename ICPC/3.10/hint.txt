@@ -1,0 +1,1 @@
+C: https://www.cnblogs.com/Cutele/p/13144295.html，需要用到快速幂，乘法逆元，lucas用不到因为数值没有模大

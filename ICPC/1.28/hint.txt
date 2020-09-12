@@ -1,0 +1,5 @@
+A: 用set存下最小的互质数
+B: factorization, exact multiple of two numbers, 24=3*2^3, then should be 3*8 (multiple of same factor)
+C: inverse element，乘法逆元，ax同余1(mod b)
+
+ioi选手2000，要进regional的话2500以下都要会

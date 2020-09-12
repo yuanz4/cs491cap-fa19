@@ -1,0 +1,2 @@
+B: use hashmap to record a vector of index for every character, then use binary search to reach next index
+C: the gcd can only be even number, can be proved, here use 2. divide all numbers to even and odd: 2 odd can convert to 2 even with 1 operation, 1 odd and 1 even can convert to 2 even with 2 operation
