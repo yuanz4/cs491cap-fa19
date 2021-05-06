@@ -1,0 +1,2 @@
+>>讲解了ICPC North America Qualifier 2020上的题目
+>>在atcoder上有很多math和thinking有关的题目，但是都属于meta类型的题目而不是多种元素的combination，data structure有关的比较少，并且基本不会遇到类似的题目
